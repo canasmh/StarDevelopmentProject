@@ -61,14 +61,6 @@ table {
     }
 }
 
-.grow { 
-    transition: all .5s ease-in-out; 
-    }
-    
-.grow:hover { 
-    transform: scale(1.15); 
-}
-
 main {
     width: 100vw;
     height: 100vh;
@@ -84,4 +76,42 @@ main img {
     height: 80vw;
     border: 1px solid #FFFFFF;
     animation: animate-shadow 6s infinite;
+}
+
+.grow { 
+    transition: all .5s ease-in-out; 
+    }
+    
+.grow:hover { 
+    transform: scale(1.15); 
+}
+
+@media only screen and (min-width: 600px) {
+
+    main img {
+        width: 70vw;
+        height: 70vw;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+
+    @keyframes animate-shadow {
+        0% {
+            box-shadow:  2px 2px 30px #fff, -2px -2px 30px #ffff, 4px 4px 100px #f5d33b, -4px -4px 100px #f5d33b;
+        }
+    
+        60% {
+            box-shadow:  2px 2px 80px #fff, -2px -2px 80px #ffff, 4px 4px 150px #f5d33b, -4px -4px 150px #f5d33b;
+        }
+    
+        100% {
+            box-shadow:  2px 2px 30px #fff, -2px -2px 30px #ffff, 4px 4px 100px #f5d33b, -4px -4px 100px #f5d33b;
+        }
+    }
+
+    main img {
+        width: 30vw;
+        height: 30vw;
+    }
 }
